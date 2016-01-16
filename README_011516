@@ -12,7 +12,7 @@ and more generally, programming errors.
 (3) How to "iterate" over arrays in C.
 (4) How to use argc and argv correctly in main.
 
-// ~ Getting Started ~ //
+// ~ Getting Started ~ // 
 
 The PE01 folder contains five files:
 (1) answer01.c: this is the file that you hand in. It has the skeleton
