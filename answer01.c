@@ -31,5 +31,5 @@ int largest_partial_sum(int * array, int len)
 
 int largest_difference(int * array, int len)
 {
-   return 0
+   return 0;
 }
