@@ -166,9 +166,9 @@ void test_01_largest_difference()
     int len1 = 8;
     test_largest_difference(array1, len1, 25);
 
-    int array3[] = { 1, 4, -1, 6, -5, 4}; 
+    int array3[] = { 1, 4, 1, 6, 5, 4}; 
     int len3 = 6;
-    test_largest_difference(array3, len3, 9);
+    test_largest_difference(array3, len3, 5);
 
     int array4[] = { -1, -2, -3, -4 };
     int len4 = 4;

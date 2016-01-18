@@ -1,5 +1,4 @@
 #include "answer01.h"
-#include <stdio.h>
 
 /* Return the largest partial sum of the array */
 /* int array[] = { 1, 4, -1, 6, -5, 4} */
@@ -37,19 +36,13 @@ int largest_difference(int * array, int len)
 	int biggest_num = array[0]; //this will contain the biggest number
 	int check_num = 0; //will store a current number which i am checking
 	if(len != 1 && len != 0){
-		for(check_num=1;check_num<0;++check_num){
+		for(check_num=1;check_num<len;++check_num){
 			if(smallest_num>array[check_num])
-				smallest_num = check_num;
+				smallest_num = array[check_num];
 			if(biggest_num<array[check_num])
-				biggest_num = check_num;
+				biggest_num = array[check_num];
 		}
-		printf("\n small %d \t big %d \n",smallest_num,biggest_num);
-		if((biggest_num >= 0 && smallest_num>=0)||(biggest_num <= 0 && smallest_num<=0)){
-			larg_diff = biggest_num - smallest_num;
-		}
-		else{
-			larg_diff = biggest_num + smallest_num;
-		}
+		larg_diff = biggest_num - smallest_num;
 	}
 	else{
 		larg_diff = 0;
