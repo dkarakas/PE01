@@ -258,7 +258,7 @@ sequentially. The easiest way to iterate over an array is to use an
 You should already be familiar with this programming motif from
 earlier courses. Please refer to the class notes and course materials
 in order to understand how to iterate over arrays in C.
-
+/*************************************************/
 Both functions largest_partial_sum and largest_difference require
 you to iterate over an array to compute the largest partial sum and
 the largest difference.

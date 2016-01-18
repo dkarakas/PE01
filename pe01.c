@@ -17,17 +17,11 @@ void printArray(int * array, int len)
 {
     printf("{");
     int ind;
-
-    // inject error
-    // change "ind < len" to "ind <= len" for your valgrind output
-    // change it back to "ind < len" after you have collected the required 
-    // output
-
     for(ind = 0; ind < len; ++ind) {
-	printf("%d", array[ind]);
-	if(ind != len - 1) {
-	    printf(", ");
-	}
+		printf("%d", array[ind]);
+		if(ind != len - 1) {
+			printf(", ");
+		}
     }
     printf("}");
     // If we don't include a '\n' character, then we need to 
@@ -68,8 +62,8 @@ int *read_in_Array(char *filename, int *arraysize)
       int dummy;
       read_stat = fscanf(fp, "%d ", &dummy);
       if (read_stat != 1) { // no number in that line, return NULL;
-	 fprintf(stderr, "input file in wrong format, read_stat %d, return NULL array\n", read_stat);
-	 fclose(fp);
+		 fprintf(stderr, "input file in wrong format, read_stat %d, return NULL array\n", read_stat);
+		 fclose(fp);
          *arraysize = 0;
          return NULL;
       }
@@ -95,8 +89,8 @@ int *read_in_Array(char *filename, int *arraysize)
       int read_stat;
       read_stat = fscanf(fp, "%d ", &(array[n_line]));
       if (read_stat != 1) { // no number in that line, return NULL;
-	 fprintf(stderr, "input file in wrong format, return NULL array\n");
-	 free(array);
+		 fprintf(stderr, "input file in wrong format, return NULL array\n");
+		 free(array);
          fclose(fp);
          *arraysize = 0;
          return NULL;
