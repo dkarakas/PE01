@@ -162,9 +162,31 @@ void test_01_largest_difference()
 {
     printf("Testing largest_difference(...)\n");
     // write your own test function
+    int array1[] = { -4, -1, 0, 1, 5, 10, 20, 21 };
+    int len1 = 8;
+    test_largest_difference(array1, len1, 24);
 
+    int array3[] = { 1, 4, -1, 6, -5, 4}; 
+    int len3 = 6;
+    test_largest_difference(array3, len3, 9);
+
+    int array4[] = { -1, -2, -3, -4 };
+    int len4 = 4;
+    test_largest_difference(array4, len4, 3);
     // ...
-
+    int array5[] = {1, 4, -1, 6, -5, 4};
+    int len5 = 6;
+    test_largest_difference(array4, len5, 9);
+    printf("\n");
+	
+	int array6[] = {1};
+    int len6 = 6;
+    test_largest_difference(array4, len6, 0);
+    printf("\n");
+	
+	int array7[] = {};
+    int len7 = 0;
+    test_largest_difference(array4, len7, 0);
     printf("\n");
 }
 
