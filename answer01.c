@@ -1,4 +1,5 @@
 #include "answer01.h"
+#include <stdio.h>
 
 /* Return the largest partial sum of the array */
 /* int array[] = { 1, 4, -1, 6, -5, 4} */
@@ -21,12 +22,18 @@ int largest_partial_sum(int * array, int len)
 	int sum = 0; //storing current sum
 	int start_num = 0; //ith term in the partial sum
 	int end_num = 0; //jth term in the partial sum
-	for(start_num = 0; start_num < len;++start_num){
-		for(end_num = start_num; end_num < len;++end_num){
-			sum = array[start_num] + array[end_num];
-			if(largest_sum < sum)
-				largest_sum = sum;
+	if(len != 0){//checks if the array is empty
+		for(start_num = 0; start_num < len;++start_num){
+			for(end_num = start_num; end_num < len;++end_num){
+				sum = sum + array[end_num];//caluclates the partial sum
+				if(largest_sum < sum)
+					largest_sum = sum; //change the sum if the value is bigger
+			}
+		sum = 0;//reset the value of the sum
 		}
+	}
+	else{
+		largest_sum=0;
 	}
    return largest_sum;
 }
