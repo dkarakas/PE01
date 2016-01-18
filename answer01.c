@@ -17,6 +17,7 @@
 
 int largest_partial_sum(int * array, int len)
 {
+	for
    return 0;
 }
 
