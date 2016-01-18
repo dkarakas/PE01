@@ -162,32 +162,6 @@ void test_01_largest_difference()
 {
     printf("Testing largest_difference(...)\n");
     // write your own test function
-    int array1[] = { -4, -1, 0, 1, 5, 10, 20, 21 };
-    int len1 = 8;
-    test_largest_difference(array1, len1, 25);
-
-    int array3[] = { 1, 4, 1, 6, 5, 4}; 
-    int len3 = 6;
-    test_largest_difference(array3, len3, 5);
-
-    int array4[] = { -1, -2, -3, -4 };
-    int len4 = 4;
-    test_largest_difference(array4, len4, 3);
-    // ...
-    int array5[] = {1, 4, -1, 6, -5, 4};
-    int len5 = 6;
-    test_largest_difference(array5, len5, 11);
-    printf("\n");
-	
-	int array6[] = {1};
-    int len6 = 1;
-    test_largest_difference(array6, len6, 0);
-    printf("\n");
-	
-	int array7[] = {};
-    int len7 = 0;
-    test_largest_difference(array7, len7, 0);
-    printf("\n");
 }
 
 // fill in statements to call largest_partial_sum or largest_difference
