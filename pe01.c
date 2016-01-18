@@ -237,12 +237,16 @@ int main(int argc, char * * argv)
 
         // fill in the rest of the statements here
         // so that the correct function is called based on the first argument
-   
-
-
-
-
-
+		
+	if(*(*(argv+1)) == 0){
+		return_value = largest_partial_sum(int * array, int len);
+	}
+	else if(*(*(argv+1)) == 1){
+		return_value = largest_difference(int * array, int len);
+	}
+	else{
+		return_value =0;
+	}
 
         // fill in the rest of the statements above this line
 
