@@ -31,21 +31,5 @@ int largest_partial_sum(int * array, int len)
 
 int largest_difference(int * array, int len)
 {
-	int larg_diff = 0; //this will contain the largest difference
-	int smallest_num = array[0]; //will contain the smallest number
-	int biggest_num = array[0]; //this will contain the biggest number
-	int check_num = 0; //will store a current number which i am checking
-	if(len != 1 && len != 0){
-		for(check_num=1;check_num<len;++check_num){
-			if(smallest_num>array[check_num])
-				smallest_num = array[check_num];
-			if(biggest_num<array[check_num])
-				biggest_num = array[check_num];
-		}
-		larg_diff = biggest_num - smallest_num;
-	}
-	else{
-		larg_diff = 0;
-	}
-   return larg_diff;
+   return 0;
 }
