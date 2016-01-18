@@ -114,6 +114,18 @@ void test_largest_partial_sum(int * array, int len, int expected)
     printf("\n");
 }
 
+// test function for largest_difference
+//
+void test_largest_difference(int * array, int len, int expected)
+{
+    printArray(array, len);
+    int sum = largest_difference(array, len);
+    printf(". partial difference = %d, expected difference = %d.", sum, expected);
+    if(sum != expected)
+	printf(" FAIL");
+    printf("\n");
+}
+
 // test function for largest_partial_sum
 //
 void test_00_largest_partial_sum()
