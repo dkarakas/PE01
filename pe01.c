@@ -237,15 +237,15 @@ int main(int argc, char * * argv)
 
         // fill in the rest of the statements here
         // so that the correct function is called based on the first argument
-	long number1 = strtol(argv[1], NULL, 10);
+	long number1 = strtol(argv[1], NULL, 10);// makes the number from a string to a number so I can compare later
 	if(number1 == 0){
-		return_value = largest_partial_sum(array,len);
+		return_value = largest_partial_sum(array,len);//the case of number 0 which find the biggest partial sum
 	}
 	else if(number1 == 1){
-		return_value = largest_difference(array,len);
+		return_value = largest_difference(array,len); //the case of number 1 which finds the biggest dif
 	}
 	else{
-		return_value =0;
+		return_value =0;//if the number is not in the specified cases 
 	}
 
         // fill in the rest of the statements above this line

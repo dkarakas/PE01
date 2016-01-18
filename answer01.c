@@ -56,11 +56,11 @@ int largest_difference(int * array, int len)
 	if(len != 1 && len != 0){
 		for(check_num=1;check_num<len;++check_num){
 			if(smallest_num>array[check_num])
-				smallest_num = array[check_num];
+				smallest_num = array[check_num];//if the current number in the loop is smaller than the smallest current number then is changed
 			if(biggest_num<array[check_num])
-				biggest_num = array[check_num];
+				biggest_num = array[check_num];//if the current number in the loop is bigger than the biggest current number then is changed
 		}
-		larg_diff = biggest_num - smallest_num;
+		larg_diff = biggest_num - smallest_num;//calculating the largest difference.
 	}
 	else{
 		larg_diff = 0;
