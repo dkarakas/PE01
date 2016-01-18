@@ -15,9 +15,27 @@
 /* but is non-NULL and correct when len is > 0 */
 /* you may also assume that none of the partial sums will cause an overflow */
 
+
 int largest_partial_sum(int * array, int len)
 {
-   return 0;
+	int largest_sum = array[0]; // a variable storing largest_sum
+	int sum = 0; //storing current sum
+	int start_num = 0; //ith term in the partial sum
+	int end_num = 0; //jth term in the partial sum
+	if(len != 0){//checks if the array is empty
+		for(start_num = 0; start_num < len;++start_num){
+			for(end_num = start_num; end_num < len;++end_num){
+				sum = sum + array[end_num];//caluclates the partial sum
+				if(largest_sum < sum)
+					largest_sum = sum; //change the sum if the value is bigger
+			}
+		sum = 0;//reset the value of the sum
+		}
+	}
+	else{
+		largest_sum=0;
+	}
+   return largest_sum;
 }
 
 /* Return the largest difference of the array */
@@ -49,3 +67,4 @@ int largest_difference(int * array, int len)
 	}
    return larg_diff;
 }
+
